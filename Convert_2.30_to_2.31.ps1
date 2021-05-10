@@ -49,8 +49,8 @@ function Set-OrAddIniValue {
 }
 
 
-#$filePath = $args[0]
-$filePath = "Default-v2.30.set"
+$filePath = $args[0]
+#$filePath = "Default-v2.30.set"
 $Destino = (Get-Item $filePath).BaseName + "-Migrate-v2.31.set"
 Copy-Item "$filePath" -Destination $Destino
 
@@ -63,7 +63,6 @@ if (!(Select-String -Path $filePath -Quiet -Pattern "MinMarginLevel")) {
 
     # Default Value 2.31
     #; Expert properties
-    #Add-Content -Path $filePath -Value "MinMarginLevel=0"
     Set-OrAddIniValue -FilePath $filePath  -keyValueList @{
         MinMarginLevel = "0"
     }
