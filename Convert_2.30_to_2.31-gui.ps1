@@ -2,7 +2,7 @@
 # Drag and drop file settings 2.30.x MT5 to windows form and press button
 #
 # Autor: Ulises Cune (@Ulises2k)
-# v2.0
+# v2.1
 
 
 Function Get-IniFile ($file) {
